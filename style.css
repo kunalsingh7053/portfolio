@@ -541,6 +541,7 @@ button:hover {
 .contact-header {
     font-size: 2.5rem; /* Larger font size for the header */
     font-weight: 600;
+    text-align: center;
     color: white;
     margin-bottom: 20px; /* Adds space below the header */
     text-transform: uppercase; /* Optional: makes the header uppercase */
