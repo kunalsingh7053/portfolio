@@ -317,21 +317,23 @@ My time at GDVP was instrumental in shaping my discipline, time management, and 
 <section id="contact-me">
     <h2 class="contact-header">Contact Me</h2>
     <form name="contact" method="POST" netlify>
-        <input type="hidden" name="form-name" value="contact" />
-        <p>
-            <label>Your Name: <input type="text" name="name" required /></label>
-        </p>
-        <p>
-            <label>Your Email: <input type="email" name="email" required /></label>
-        </p>
-        <p>
-            <label>Message: <textarea name="message" required></textarea></label>
-        </p>
-        <p>
-            <button type="submit">Send</button>
-        </p>
+      <input type="hidden" name="form-name" value="contact" />
+      <p>
+        <label>Your Name: <input type="text" name="name" required /></label>
+      </p>
+      <p>
+        <label>Your Email: <input type="email" name="email" required /></label>
+      </p>
+      <p>
+        <label>Message: <textarea name="message" required></textarea></label>
+      </p>
+      <p>
+        <button type="submit">Send</button>
+      </p>
     </form>
-</section>
+    <div id="responseMessage" style="display: none;"></div> <!-- Response message box -->
+  </section>
+  
 
 
 <section class="footer flex justify-between mt-20">
