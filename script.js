@@ -142,4 +142,29 @@ menuToggle.addEventListener("click", function () {
             navbar.style.top = "0";
           }, 200);
         });
-        
+        const form = document.querySelector("form");
+    const messageBox = document.getElementById("responseMessage");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const formData = new FormData(form);
+
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData).toString()
+      })
+      .then(() => {
+        messageBox.textContent = "✅ Thank you! Your message has been sent.";
+        messageBox.classList.remove("error");
+        messageBox.style.display = "block";
+        form.reset();
+      })
+      .catch((error) => {
+        messageBox.textContent = "❌ Oops! Something went wrong.";
+        messageBox.classList.add("error");
+        messageBox.style.display = "block";
+        console.error("Form submission error:", error);
+      });
+    });
