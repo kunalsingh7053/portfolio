@@ -563,3 +563,20 @@ button:hover {
         margin-bottom: 10px;
     }
 }
+
+#typewriter h1 {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 4px solid #00ff99;
+  width: 0;
+  animation: typing 4s steps(30, end) forwards, blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
