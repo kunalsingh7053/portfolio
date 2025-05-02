@@ -114,9 +114,10 @@ function prev() {
 
 // Preloader Hide After Page Load
 window.addEventListener("load", function () {
-    document.querySelector(".preloader").style.display = "none";
+    document.querySelector(".loaderdiv").style.display = "none";
     document.querySelector(".content").style.display = "block";
 });
+
 
 // Navbar Hide/Show on Scroll
 let prevScrollPos = window.scrollY;

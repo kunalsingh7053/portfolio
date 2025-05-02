@@ -11,13 +11,11 @@
     
 </head>
 <body> 
-    <div class="preloader flex flex-col">
-        <h1 class="font-bold text-3xl">Loading</h1>
-        <div class="spinner">
-
-        </div>
+    <div class="loaderdiv">
+<h1 class="loadertxt">Loading........</h1>
+        <span class="loader"></span>
     </div>
-    <main class="w-full px-[5px] sm:px-[4rem] xl:px-[4rem]  font-serif  overflow-hidden">
+    <main class="content w-full px-[5px] sm:px-[4rem] xl:px-[4rem]  font-serif  overflow-hidden">
         <video autoplay muted loop playsinline preload="auto">
             <source src="https://videos.pexels.com/video-files/1943483/1943483-uhd_2560_1440_25fps.mp4" type="video/mp4">
             <source src="https://videos.pexels.com/video-files/1943483/1943483-uhd_2560_1440_25fps.mp4" type="video/webm">
@@ -57,10 +55,18 @@
 <section class="picture w-full h-[30rem] sm:h-[40rem]   mt-15 ">
     <img src="https://i.pinimg.com/originals/43/af/d0/43afd01dc42127c352f1fde070cc2be0.jpg" alt="" class="w-full h-full object-cover object-[40%_10%] ">
 </section>
-<section class="marque mt-10 mb-10">
-    
-    <marquee behavior="scroll" direction="left" class="text-2xl">🚀 Welcome to My Portfolio! 🚀 • Creative Front-End Developer • Turning Ideas into Reality • Let's Build Something Amazing Together! • 🚀 Welcome to My Portfolio! 🚀 • Creative Front-End Developer • Turning Ideas into Reality • Let's Build Something Amazing Together! •</marquee>
+
+<section class="marque mt-10 mb-10 overflow-hidden bg-black text-white">
+    <div class="marquee-track flex whitespace-nowrap animate-marquee text-2xl">
+      <span class="mx-4">
+        🚀 Welcome to My Portfolio! 🚀 • Creative Front-End Developer • Turning Ideas into Reality • Let's Build Something Amazing Together! •
+      </span>
+      <span class="mx-4">
+        🚀 Welcome to My Portfolio! 🚀 • Creative Front-End Developer • Turning Ideas into Reality • Let's Build Something Amazing Together! •
+      </span>
+    </div>
   </section>
+  
 <section id="About-Me" class="about w-full  xl:px-10 py-20 mt-32 flex items-center justify-center">
 
     <div class="relative  text text-center w-2/3" >
