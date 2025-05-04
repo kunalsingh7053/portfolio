@@ -726,7 +726,7 @@ nav{
 .revealitem{
     opacity: 0;
     transform: translateX(-100px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
   }
   
   /* Visible state when revealed */
