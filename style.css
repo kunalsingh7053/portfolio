@@ -646,14 +646,11 @@ button:hover {
     margin: auto;
 
   }
-img {vertical-align: middle;
- 
-}
+
 .center-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
   }
 /* Slideshow container */
 .slideshow-container {
@@ -725,3 +722,15 @@ nav{
     animation:kunal 1s ease forwards;
     opacity: 0;
 }
+
+.revealitem{
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+  
+  /* Visible state when revealed */
+  .revealitem.reveal {
+    opacity: 1;
+    transform: translateX(0);
+  }

@@ -196,3 +196,19 @@ function showSlides() {
   slides[slideIndex-1].style.display = "block";  
   setTimeout(showSlides, 3000); // Change image every 3 seconds
 }
+
+const boxes = document.querySelectorAll('.revealitem');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('reveal');
+    } else {
+      entry.target.classList.remove('reveal'); // re-animate on scroll back
+    }
+  });
+}, {
+  threshold: 0.3
+});
+
+boxes.forEach(revealitem => observer.observe(revealitem));
