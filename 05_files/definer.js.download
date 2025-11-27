@@ -1,0 +1,7 @@
+!(function () {
+	function e() { return document.cookie.replace(/(?:(?:^|.*;\s*)fngprntId\s*\=\s*([^;]*).*$)|^.*$/, '$1'); } function n(e) { fngprnt && fngprnt.get((n) => { const t = []; for (let r = 0; r < n.length; r++)t.push(n[r].value); e(fngprnt && fngprnt.x64hash128(t.join(''), 31)); }); } function t(e) { const n = new Date(); n.setTime(n.getTime() + 2592e5); const t = `; expires=${n.toGMTString()}`; document.cookie = `fngprntId=${e}${t}`; } function r(e) { document.dispatchEvent(new CustomEvent('fngprntDefined', { detail: e })); } function i() { const e = JSON.parse(localStorage.getItem('user')); return e ? e.data.id : null; } function o(e) {
+		let n = null; i() !== null && (n = i().toString()); const t = {
+			experiment: '', subject: e.toString(), action: 'visit', page: window.location.href, element: '', referrer: document.referrer, userId: n,
+		}; const r = new XMLHttpRequest(); r.open('POST', `${window.slConfig.envURLs.trackingApiHost}/api/event`, !0), r.setRequestHeader('Content-Type', 'application/json'), r.send(JSON.stringify(t));
+	} if (s = 'sololearn.com/', document.referrer.indexOf(s) > -1 || sessionStorage.getItem('sessionStart'))e() ? r(e()) : n((e) => { t(e), r(e); }); else { sessionStorage.setItem('sessionStart', new Date().getTime().toString()); var s; const a = e(); a ? (o(a), r(a)) : n((e) => { t(e), o(e), r(e); }); }
+}());
